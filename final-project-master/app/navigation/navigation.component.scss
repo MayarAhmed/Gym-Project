@@ -1,0 +1,35 @@
+@import '../../scss/variables';
+
+nav{
+  width:100%;
+   background-color: black;
+  .navbar-nav{
+    flex-direction: row;
+  }
+  .navbar-toggler{
+    background-color:$primary_color;
+    padding: 1px 13px;
+  }
+  .login,.signup{
+    border:1px solid $primary_color;
+    color:white;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:12px;
+    padding-right:12px;
+    border-radius:$round_ratio;
+  }
+  .login:hover, .signup:hover{
+    cursor:pointer;
+  }
+  .login{
+    background-color: transparent;
+  }
+  .login:hover{
+    background-color:$primary_color;
+  }
+  .signup{
+    background-color: $primary_color;
+  }
+
+}

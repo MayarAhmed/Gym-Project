@@ -1,0 +1,703 @@
+
+<section class="gym-gallery container pb-5">
+  <div class="row ">
+    <div class="col-7">
+      <div class="row mt-5 pb-5">
+        <div class="col-3">
+          <img  class="gallery" src="{{dataShowed.headerImg}}"  height="150px" width="150px" (click)="changeImg($e);">
+        </div>
+        <div class="col-3">
+          <img  class="gallery" src="{{dataShowed.img1}}" height="150px" width="150px"  (click)="changeImg($e);">
+        </div>
+        <div class="col-3">
+          <img  class="gallery" src="{{dataShowed.img2}}" height="150px" width="150px"  (click)="changeImg($e);">
+        </div>
+        <div class="col-3">
+          <img  class="gallery" src="{{dataShowed.img3}}"  height="150px" width="150px" (click)="changeImg($e);">
+        </div>
+      </div>
+      <div class="row">
+<div class="col-12">
+        <div >
+            <!-- <span (click)="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+          <img class="large-img" src={{dataShowed.headerImg}} height="600px">
+        </div>
+      </div>
+    </div>
+    </div>
+        <div class="col-5 mt-5 raleway">
+          <ul>
+            <h2>{{dataShowed.name}}</h2>
+            <h6 class="d-inline-block"><span class="pr-2"></span></h6>
+            <p>{{dataShowed.address}} , {{dataShowed.district}}</p>
+            <h6>Phone : {{dataShowed.phone}}</h6>
+            <p>Gender : {{dataShowed.gender}}</p>
+
+            <h6>Services</h6>
+            <label *ngIf='dataShowed.spa == true' class="pr-3">
+              <p>Spa </p>
+            </label>
+            <label *ngIf='dataShowed.sauna == true' class="pr-3">
+              <p> Sauna </p>
+            </label>
+            <label *ngIf='dataShowed.jacuzzi == true' class="pr-3">
+              <p> Jaccuzi </p>
+            </label>
+            <label *ngIf='dataShowed.steam == true' class="pr-3">
+              <p> Steam </p>
+            </label>
+            <label *ngIf='dataShowed.massage == true'>
+              <p> Massage</p>
+            </label>
+
+            <p>Goldy's Gym offers you all kind of your wishlist services like Spa , Sauna , Jacuzzi , Massage and Steam Room</p>
+            <label *ngIf='dataShowed.sauna == true'>
+              <img src="../../assets/images/png/012-person-silhouette-in-sauna.png" class="icon"alt="">
+            </label>
+            <label *ngIf='dataShowed.steam == true'>
+              <img src="../../assets/images/png/011-sauna-door.png" class="icon" alt="">
+            </label>
+            <label *ngIf='dataShowed.spa == true'>
+              <img src="../../assets/images/png/019-massage-spa-body-treatment.png" class="icon" alt="">
+            </label>
+            <br>
+            <label *ngIf='dataShowed.jacuzzi == true'>
+                <img src="../../assets/images/png/009-swimming-man.png" class="icon" alt="">
+            </label>
+            <label *ngIf='dataShowed.massage == true'>
+              <img src="../../assets/images/png/008-exercise.png" class="icon" alt=""><br>
+            </label>
+
+
+          </ul>
+
+        </div>
+  </div>
+  <div class="mt-4 raleway">
+    <h4 class="text-center">About Gym</h4>
+    <hr>
+    <p>{{dataShowed.discription}}</p>
+  </div>
+
+</section>
+
+
+
+<div id="schedule">
+  <div class="container mx-auto py-5 raleway">
+      <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+              <h2 class="text-white my-3 py-3 raleway">Class Schedule</h2>
+          </div>
+      </div>
+
+  <ngb-tabset class="cst text-light mb-5">
+          <ngb-tab title="Sun">
+              <ng-template ngbTabContent>
+                  <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                          <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                              <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                  <li class="text-center float-left">
+                                      <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                      <div class="pt-3">
+
+                                              <p class="time">7:00 AM - 8AM</p>
+                                              <h4>Cardio</h4>
+                                              <small>Toqa</small>
+                                      </div>
+
+                                  </li>
+                                  <li class="text-center  float-left">
+                                          <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                          <div class="pt-3">
+
+                                                  <p class="time">8:00 AM - 9AM</p>
+                                                  <h4>Boxing</h4>
+                                                  <small>Rahada</small>
+                                          </div>
+                                          </li>
+                                          <li class="text-center float-left">
+                                              <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                              <div class="pt-3">
+
+                                                      <p class="time">7:00 AM - 8AM</p>
+                                                      <h4>Lifting</h4>
+                                                      <small>Mohamed</small>
+                                              </div>
+                                              </li>
+                                              <li class="text-center w-25 float-left">
+                                                  <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                  <div class="pt-3">
+
+                                                          <p class="time">9:00 AM - 10AM</p>
+                                                          <h4>Ballet</h4>
+                                                          <small>Samira </small>
+                                                  </div>
+                                                  <li class="text-center float-left">
+                                                      <span><img src="../../assets/images/meditation-yoga-posture.png" class="img-fluid" alt="Icon"></span>
+                                                      <div class="pt-3">
+
+                                                              <p class="time">10:00 AM - 11AM</p>
+                                                              <h4>Training</h4>
+                                                              <small>Walaa</small>
+                                                      </div>
+                                                      <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/exercise.png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">11:00 AM - 12PM</p>
+                                                                  <h4>Excercise</h4>
+                                                                  <small>Asmaa</small>
+                                                          </div>
+                                                          </li>
+                                                          <li class="text-center float-left ">
+                                                              <span><img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">1:00 PM - 3PM</p>
+                                                                      <h4>Excercise</h4>
+                                                                      <small>Marina</small>
+                                                              </div>
+                                                              </li>
+                                                              <li class="text-center  float-left ">
+                                                                  <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+                                                                          <p class="time">3:00 AM - 6AM</p>
+                                                                          <h4>Boxing</h4>
+                                                                          <small>Ekbal</small>
+                                                                  </div>
+                                                                  </li>
+                                  </ul>
+                              </div>
+                      </div>
+                  </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Mon">
+                  <ng-template ngbTabContent>
+                          <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                                  <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                                      <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                          <li class="text-center  float-left">
+                                              <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                              <div class="pt-3">
+
+                                                      <p class="time">7:00 AM - 8AM</p>
+                                                      <h4>Lifting</h4>
+                                                      <small>Anglina</small>
+                                              </div>
+
+                                          </li>
+                                          <li class="text-center float-left">
+                                                  <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                  <div class="pt-3">
+
+                                                          <p class="time">8:00 AM - 9AM</p>
+                                                          <h4>Fighting</h4>
+                                                          <small>Marina</small>
+                                                  </div>
+                                                  </li>
+                                                  <li class="text-center  float-left">
+                                                      <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                                      <div class="pt-3">
+
+                                                              <p class="time">9:00 AM - 10AM</p>
+                                                              <h4>Lifting</h4>
+                                                              <small>Moataz</small>
+                                                      </div>
+                                                      </li>
+                                                      <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">10 AM - 11AM</p>
+                                                                  <h4>Ballet</h4>
+                                                                  <small>Ngat</small>
+                                                          </div>
+                                                          <li class="text-center  float-left">
+                                                              <span><img src="../../assets/images/meditation-yoga-posture.png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">11 AM - 12AM</p>
+                                                                      <h4>Yoga</h4>
+                                                                      <small>Adams</small>
+                                                              </div>
+                                                              <li class="text-center float-left">
+                                                                  <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+
+                                                                          <p class="time">7:00 AM - 8AM</p>
+                                                                          <h4>Running</h4>
+                                                                          <small>Angelina</small>
+                                                                  </div>
+                                                                  </li>
+                                                                  <li class="text-center float-left ">
+                                                                      <span><img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon"></span>
+                                                                      <div class="pt-3">
+
+                                                                              <p class="time">7:00 AM - 8AM</p>
+                                                                              <h4>Cardio</h4>
+                                                                              <small>Farida</small>
+                                                                      </div>
+                                                                      </li>
+                                                                      <li class="text-center float-left ">
+                                                                          <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                                          <div class="pt-3">
+
+                                                                                  <p class="time">7:00 AM - 8AM</p>
+                                                                                  <h4>Boxing</h4>
+                                                                                  <small>Samir</small>
+                                                                          </div>
+                                                                          </li>
+                                          </ul>
+                                      </div>
+                              </div>
+                          </ng-template>
+          </ngb-tab>
+
+  <ngb-tab title="Tue">
+          <ng-template ngbTabContent>
+                  <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                          <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                              <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                  <li class="text-center  float-left">
+                                      <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                      <div class="pt-3">
+
+                                              <p class="time">7:00 AM - 8AM</p>
+                                              <h4>Cardio</h4>
+                                              <small>Adams</small>
+                                      </div>
+
+                                  </li>
+                                  <li class="text-center  float-left">
+                                          <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                          <div class="pt-3">
+
+                                                  <p class="time">8:00 AM - 9AM</p>
+                                                  <h4>Boxing</h4>
+                                                  <small>Farida</small>
+                                          </div>
+                                          </li>
+                                          <li class="text-center  float-left">
+                                              <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                              <div class="pt-3">
+
+                                                      <p class="time">9:00 AM - 10AM</p>
+                                                      <h4>Lifting</h4>
+                                                      <small>Alya</small>
+                                              </div>
+                                              </li>
+                                              <li class="text-center  float-left">
+                                                  <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                  <div class="pt-3">
+
+                                                          <p class="time">10:00 AM - 11AM</p>
+                                                          <h4>ballet</h4>
+                                                          <small>Zahra</small>
+                                                  </div>
+                                                  <li class="text-center  float-left">
+                                                      <span><img src="../../assets/images/meditation-yoga-posture.png" class="img-fluid" alt="Icon"></span>
+                                                      <div class="pt-3">
+
+                                                              <p class="time">11:00 AM - 12PM</p>
+                                                              <h4>Yoga</h4>
+                                                              <small>Andria</small>
+                                                      </div>
+                                                      <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">12:00 PM - 2PM</p>
+                                                                  <h4>Running</h4>
+                                                                  <small>Ali</small>
+                                                          </div>
+                                                          </li>
+                                                          <li class="text-center float-left ">
+                                                              <span><img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">2:00 PM - 4PM</p>
+                                                                      <h4>Cardio</h4>
+                                                                      <small>Serena</small>
+                                                              </div>
+                                                              </li>
+                                                              <li class="text-center  float-left ">
+                                                                  <span><img src="../../assets/images/exercise.png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+
+                                                                          <p class="time">7:00 AM - 8AM</p>
+                                                                          <h4>Excercise</h4>
+                                                                          <small>Sussan</small>
+                                                                  </div>
+                                                                  </li>
+                                  </ul>
+                              </div>
+                      </div>
+                  </ng-template>
+          </ngb-tab>
+
+          <ngb-tab title="Wed" >
+              <ng-template ngbTabContent>
+                      <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                              <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                                  <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                      <li class="text-center  float-left">
+                                          <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                          <div class="pt-3">
+
+                                                  <p class="time">7:00 AM - 8AM</p>
+                                                  <h4>Cardio</h4>
+                                                  <small>Zahra</small>
+                                          </div>
+
+                                      </li>
+                                      <li class="text-center  float-left">
+                                              <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                              <div class="pt-3">
+
+                                                      <p class="time">8:00 AM - 9AM</p>
+                                                      <h4>Boxing</h4>
+                                                      <small>Samir</small>
+                                              </div>
+                                              </li>
+                                              <li class="text-center float-left">
+                                                  <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                                  <div class="pt-3">
+
+                                                          <p class="time">9:00 AM - 10AM</p>
+                                                          <h4>Lifting</h4>
+                                                          <small>Marina</small>
+                                                  </div>
+                                                  </li>
+                                                  <li class="text-center  float-left">
+                                                      <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                      <div class="pt-3">
+
+                                                              <p class="time">10:00 AM - 11AM</p>
+                                                              <h4>Ballet</h4>
+                                                              <small>Farida</small>
+                                                      </div>
+                                                      <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/meditation-yoga-posture.png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">11:00 AM - 12PM</p>
+                                                                  <h4>Cardio</h4>
+                                                                  <small>Marina</small>
+                                                          </div>
+                                                          <li class="text-center float-left">
+                                                              <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">12:00 PM - 2PM</p>
+                                                                      <h4>Cardio</h4>
+                                                                      <small>Samira</small>
+                                                              </div>
+                                                              </li>
+                                                              <li class="text-center float-left ">
+                                                                  <span><img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+
+                                                                          <p class="time">2:00 PM - 4PM</p>
+                                                                          <h4>Cardio</h4>
+                                                                          <small>Angel Adams</small>
+                                                                  </div>
+                                                                  </li>
+                                                                  <li class="text-center  float-left ">
+                                                                      <span><img src="../../assets/images/exercise.png" class="img-fluid" alt="Icon"></span>
+                                                                      <div class="pt-3">
+
+                                                                              <p class="time">4:00 PM - 6PM</p>
+                                                                              <h4>Cardio</h4>
+                                                                              <small>Farida</small>
+                                                                      </div>
+                                                                      </li>
+                                      </ul>
+                                  </div>
+                          </div>
+                      </ng-template>
+              </ngb-tab>
+
+              <ngb-tab title="Thu">
+                  <ng-template ngbTabContent>
+                          <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                                  <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                                      <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                          <li class="text-center  float-left">
+                                              <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                              <div class="pt-3">
+
+                                                      <p class="time">7:00 AM - 8AM</p>
+                                                      <h4>Weight</h4>
+                                                      <small>Marina</small>
+                                              </div>
+
+                                          </li>
+                                          <li class="text-center float-left">
+                                                  <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                  <div class="pt-3">
+
+                                                          <p class="time">8:00 AM - 9AM</p>
+                                                          <h4>Boxing</h4>
+                                                          <small>Samir</small>
+                                                  </div>
+                                                  </li>
+                                                  <li class="text-center float-left">
+                                                      <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                                      <div class="pt-3">
+
+                                                              <p class="time">9:00 AM - 10PM</p>
+                                                              <h4>Lifting</h4>
+                                                              <small>Farida</small>
+                                                      </div>
+                                                      </li>
+                                                      <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">10:00 AM - 11AM</p>
+                                                                  <h4>Ballet</h4>
+                                                                  <small>Mayar</small>
+                                                          </div>
+                                                          <li class="text-center float-left">
+                                                              <span><img src="../../assets/images/meditation-yoga-posture.png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">11:00 AM - 12PM</p>
+                                                                      <h4>Cardio</h4>
+                                                                      <small>Angel Adams</small>
+                                                              </div>
+                                                              <li class="text-center  float-left">
+                                                                  <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+
+                                                                          <p class="time">1:00 PM - 3PM</p>
+                                                                          <h4>Running</h4>
+                                                                          <small>Farida</small>
+                                                                  </div>
+                                                                  </li>
+                                                                  <li class="text-center  float-left ">
+                                                                      <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                                      <div class="pt-3">
+
+                                                                              <p class="time">3:00 PM - 5PM</p>
+                                                                              <h4>Running</h4>
+                                                                              <small>Zahra</small>
+                                                                      </div>
+                                                                      </li>
+                                                                      <li class="text-center  float-left ">
+                                                                          <span><img src="../../assets/images/exercise.png" class="img-fluid" alt="Icon"></span>
+                                                                          <div class="pt-3">
+
+                                                                                  <p class="time">5:00 PM - 7PM</p>
+                                                                                  <h4>Cardio</h4>
+                                                                                  <small>Angel Adams</small>
+                                                                          </div>
+                                                                          </li>
+                                          </ul>
+                                      </div>
+                              </div>
+                          </ng-template>
+                  </ngb-tab>
+
+                  <ngb-tab title="Fri">
+                      <ng-template ngbTabContent>
+                              <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                                      <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                                          <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                              <li class="text-center float-left">
+                                                  <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                                  <div class="pt-3">
+
+                                                          <p class="time">7:00 AM - 8AM</p>
+                                                          <h4>Cardio</h4>
+                                                          <small>Mayar</small>
+                                                  </div>
+
+                                              </li>
+                                              <li class="text-center float-left">
+                                                      <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                      <div class="pt-3">
+
+                                                              <p class="time">8:00 AM - pAM</p>
+                                                              <h4>Boxing</h4>
+                                                              <small>Fady</small>
+                                                      </div>
+                                                      </li>
+                                                      <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">9:00 AM - 10AM</p>
+                                                                  <h4>Lifting</h4>
+                                                                  <small>Asmaa</small>
+                                                          </div>
+                                                          </li>
+                                                          <li class="text-center  float-left">
+                                                              <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">10:00 AM - 11AM</p>
+                                                                      <h4>Ballet</h4>
+                                                                      <small>Maryam</small>
+                                                              </div>
+                                                              <li class="text-center  float-left">
+                                                                  <span><img src="../../assets/images/meditation-yoga-posture.png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+
+                                                                          <p class="time">11:00 AM - 12PM</p>
+                                                                          <h4>Yoga</h4>
+                                                                          <small>Zahra</small>
+                                                                  </div>
+                                                                  <li class="text-center  float-left">
+                                                                      <span><img src="../../assets/images/exercise.png" class="img-fluid" alt="Icon"></span>
+                                                                      <div class="pt-3">
+
+                                                                              <p class="time">12:00 PM - 2PM</p>
+                                                                              <h4>Excercise</h4>
+                                                                              <small>Ahmed</small>
+                                                                      </div>
+                                                                      </li>
+                                                                      <li class="text-center  float-left ">
+                                                                          <span><img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon"></span>
+                                                                          <div class="pt-3">
+
+                                                                                  <p class="time">2:00 PM - 5PM</p>
+                                                                                  <h4>Weight</h4>
+                                                                                  <small>Angelina</small>
+                                                                          </div>
+                                                                          </li>
+                                                                          <li class="text-center float-left ">
+                                                                              <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                                              <div class="pt-3">
+
+                                                                                      <p class="time">5:00 PM - 7PM</p>
+                                                                                      <h4>Cardio</h4>
+                                                                                      <small>Angelina</small>
+                                                                              </div>
+                                                                              </li>
+                                              </ul>
+                                          </div>
+                                  </div>
+                              </ng-template>
+                      </ngb-tab>
+
+                      <ngb-tab title="Sat">
+                          <ng-template ngbTabContent>
+                                  <div class="fh5co-tab-content-wrap d-flex justify-content-between">
+                                          <div class="fh5co-tab-content tab-content active w-100" data-tab-content="1">
+                                              <ul class="class-schedule w-1 float-left p-0 w-100" [@fadeOut]="state">
+                                                  <li class="text-center float-left">
+                                                      <img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon">
+                                                      <div class="pt-3">
+
+                                                              <p class="time">7:00 AM - 8AM</p>
+                                                              <h4>Cardio</h4>
+                                                              <small>Angel Adams</small>
+                                                      </div>
+
+                                                  </li>
+                                                  <li class="text-center float-left">
+                                                          <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                          <div class="pt-3">
+
+                                                                  <p class="time">7:00 AM - 8AM</p>
+                                                                  <h4>Cardio</h4>
+                                                                  <small>Angel Adams</small>
+                                                          </div>
+                                                          </li>
+                                                          <li class="text-center  float-left">
+                                                              <span><img src="../../assets/images/weight-lifting.png" class="img-fluid" alt="Icon"></span>
+                                                              <div class="pt-3">
+
+                                                                      <p class="time">7:00 AM - 8AM</p>
+                                                                      <h4>Lifting</h4>
+                                                                      <small>Marina</small>
+                                                              </div>
+                                                              </li>
+                                                              <li class="text-center  float-left">
+                                                                  <span><img src="../../assets/images/ballet (2).png" class="img-fluid" alt="Icon"></span>
+                                                                  <div class="pt-3">
+
+                                                                          <p class="time">7:00 AM - 8AM</p>
+                                                                          <h4>Ballet</h4>
+                                                                          <small>Angelina</small>
+                                                                  </div>
+                                                                  <li class="text-center float-left">
+                                                                      <span><img src="../../assets/images/exercise.png" class="img-fluid" alt="Icon"></span>
+                                                                      <div class="pt-3">
+
+                                                                              <p class="time">11:00 AM - 1PM</p>
+                                                                              <h4>Excercise</h4>
+                                                                              <small>Sanmir</small>
+                                                                      </div>
+                                                                      <li class="text-center float-left">
+                                                                          <span><img src="../../assets/images/running-excersice.png" class="img-fluid" alt="Icon"></span>
+                                                                          <div class="pt-3">
+
+                                                                                  <p class="time">1:00 PM - 3PM</p>
+                                                                                  <h4>Running</h4>
+                                                                                  <small>Angel Adams</small>
+                                                                          </div>
+                                                                          </li>
+                                                                          <li class="text-center float-left ">
+                                                                              <span><img src="../../assets/images/dumbbell.png" class="img-fluid" alt="Icon"></span>
+                                                                              <div class="pt-3">
+
+                                                                                      <p class="time">3:00 PM - 5PM</p>
+                                                                                      <h4>Cardio</h4>
+                                                                                      <small>Zahra</small>
+                                                                              </div>
+                                                                              </li>
+                                                                              <li class="text-center float-left ">
+                                                                                  <span><img src="../../assets/images/boxing-gloves.png" class="img-fluid" alt="Icon"></span>
+                                                                                  <div class="pt-3">
+
+                                                                                          <p class="time">5:00 PM - 7PM</p>
+                                                                                          <h4>Boxing</h4>
+                                                                                          <small>Angelina</small>
+                                                                                  </div>
+                                                                                  </li>
+                                                  </ul>
+                                              </div>
+                                      </div>
+                                  </ng-template>
+                          </ngb-tab>
+
+  </ngb-tabset>
+</div>
+
+  <div class="book-btn text-center pb-3">
+
+  <div class="book-btn text-center mt-3 pb-3">
+
+  <a routerLink="book">
+    <button type="button" class="btn px-5 fill">BOOK NOW</button>
+  </a>
+
+  </div>
+
+</div>
+</div>
+<agm-map  [latitude]='lat' [longitude]='lng'>
+  <agm-marker [latitude]='lat' [longitude]='lng'></agm-marker>
+</agm-map>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <form #comment="ngForm" (ngSubmit)= "addComment(comment)">
+        <div class="form-group">
+        <h3 for="exampleFormControlTextarea1 raleway">Leave a comment</h3>
+        <textarea class="form-control" name="comment" [(ngModel)]="commentObject.comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button class="btn px-5 postBtn text-white raleway"> <strong>POST</strong></button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="commentDiv raleway" *ngFor="let item of selectedComments">
+        <h5><strong>{{item.user}}</strong></h5>
+        <p>{{item.comment}}</p>
+      </div>
+    </div>
+  </div>
+</div>

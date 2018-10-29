@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+footer{
+  // background-image: url('../../assets/images/10_gym.jpg');
+  // background-size: cover;
+  // color:white;
+  background-color: black;
+  small{
+      font-family: raleway;
+      color: lightgrey;
+  }
+
+  h6{
+    color:$primary_color;
+    font-weight:bold;
+  }
+  // .overlay{
+  //   background: rgba(0,0,0,.8);
+  // }
+
+}

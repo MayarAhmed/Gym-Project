@@ -1,0 +1,94 @@
+@import '../../scss/_variables';
+
+.btn.line{
+  color: black;
+}
+.btn.line:hover{
+  color: white;
+}
+
+.welcome {
+    padding: 0;
+    margin: 0;
+    background-image:url("../../assets/img/scott-webb-22420-unsplash.jpg");
+    height: 90vh;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+
+    .login {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.8);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+      border-radius:  $round_ratio;
+      h4 {
+        margin: 0 0 30px;
+        padding: 0;
+        text-align: center;
+        color: $primary_color;
+      }
+      .inputBox {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+          color: #fff;
+          margin-bottom: 30px;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          border-bottom: 1px solid #fff !important;
+          letter-spacing: 3px;
+        }
+        label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          pointer-events: none;
+          transition: .5s;
+        }
+        input:focus~label,
+        input:valid~label {
+          top: -5vh;
+          left: 0;
+          color: $primary_color;
+          font-size: 12px;
+        }
+      }
+      button {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: $primary_color;
+        padding: 10px 20px;
+        border-radius:  $round_ratio;
+        margin: 0 auto;
+        display: inherit;
+        cursor: pointer;
+      }
+      button:disabled{
+        background-color: grey;
+      }
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 900px) {
+    .login {
+      width: 85% !important;
+    }
+    input:focus~label,
+    input:valid~label {
+      top: -5vh!important;
+    }
+  }

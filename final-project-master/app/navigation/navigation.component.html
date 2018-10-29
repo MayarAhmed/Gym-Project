@@ -1,0 +1,85 @@
+<!--if not registered  -->
+
+<nav class="navbar navbar-expand-lg navbar-light" *ngIf="registerdTrue == false" >
+  <div class="container">
+
+  <a class="navbar-brand text-white raleway font-weight-bold" routerLink=''>
+<img src="../../assets/images/logo (2).png" height="50px" width="70px">
+
+    <!-- <h2>Gym</h2> -->
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active pr-2">
+        <a class="nav-link text-white raleway" routerLink=''>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='gyms'>Gyms</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='offers'>Offers</a>
+      </li>
+
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='careers'>Careers</a>
+      </li>
+
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='fitness'>Fitness</a>
+      </li>
+    </ul>
+  <a routerLink="login">
+     <button class="login mr-2 raleway">Log In</button></a>
+    <a routerLink="signup">
+      <button class="signup raleway">Sign Up</button></a>
+  </div>
+</div>
+</nav>
+
+
+
+
+<!-- if regisetrd -->
+
+<nav class="navbar navbar-expand-lg navbar-light" *ngIf="registerdTrue == true">
+  <div class="container">
+
+  <a class="navbar-brand text-white raleway font-weight-bold" routerLink=''>
+<img src="../../assets/images/35375771_2099240696989915_2678153194160259072_n.png" height="110px" width="120px">
+
+    <!-- <h2>Gym</h2> -->
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active pr-2">
+        <a class="nav-link text-white raleway" routerLink=''>Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='gyms'>Gyms</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='offers'>Offers</a>
+      </li>
+
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='careers'>Careers</a>
+      </li>
+
+      <li class="nav-item pr-2">
+        <a class="nav-link text-white raleway" routerLink='fitness'>Fitness</a>
+      </li>
+    </ul>
+  <a routerLink="profile">
+     <button class="login mr-2 raleway">{{user.email}}</button></a>
+
+  </div>
+</div>
+
+
+</nav>

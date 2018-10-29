@@ -1,0 +1,182 @@
+*{
+  font-family: raleway;
+}
+.jumbotron{
+  background:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../../assets/images/offers/nintchdbpict0003162434441.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  height:50vh;
+  h1{
+    color:#ff6400;
+    font-weight: bold;
+  }
+  a{
+    background-color: #ff6400;
+    border-radius: 25px;
+    text-decoration: none;
+    color:#fff;
+  }
+  p{
+    color:#fff;
+    font-size: 45px;
+  }
+
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    border:1px solid #ff6400;
+    float: right;
+    width: 30%;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.card-text{
+  color:#a29f9d;
+}
+.hovereffect{
+  a{
+    border-radius: 25px;
+  }
+  h2{
+    color:#ff6400;
+    font-size: 72px;
+  }
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    width: 100%;
+    padding: 6px;
+    border: none;
+    margin-top: 0px;
+    margin-right: 16px;
+    font-size: 17px;
+    background: transparent;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+     .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+.cards{
+
+  background: url('../../assets/images/offers/Strength_and_fitness_tm_44.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+.card{
+  border:none;
+  background:transparent;
+  a{
+    img{
+      border-radius: 15px;
+    }
+  }
+}
+}
+.card-title{
+  a{
+   color:#ff6400;
+   text-decoration: none;
+   }
+}
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+  }
+  img {
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+  }
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    -webkit-transform: translatey(-100px);
+    -ms-transform: translatey(-100px);
+    transform: translatey(-100px);
+    -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    padding: 10px;
+  }
+  a.info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin: 50px 0 0;
+    padding: 7px 14px;
+    &:hover {
+      box-shadow: 0 0 5px #fff;
+    }
+  }
+  &:hover {
+    img {
+      -ms-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    .overlay {
+      opacity: 1;
+      filter: alpha(opacity = 100);
+    }
+    h2 {
+      opacity: 1;
+      filter: alpha(opacity = 100);
+      -ms-transform: translatey(0);
+      -webkit-transform: translatey(0);
+      transform: translatey(0);
+    }
+    a.info {
+      opacity: 1;
+      filter: alpha(opacity = 100);
+      -ms-transform: translatey(0);
+      -webkit-transform: translatey(0);
+      transform: translatey(0);
+      -webkit-transition-delay: .2s;
+      transition-delay: .2s;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+.profile{
+  background-color: #f7f7f7;
+  border-radius:$round_ratio;
+  label{
+    color:$primary_color;
+    padding-left: 3px;
+  }
+  .btn.line{
+    color: black;
+  }
+  .btn.line:hover{
+    color: white;
+    border:1px solid $primary_color;
+  }
+
+}

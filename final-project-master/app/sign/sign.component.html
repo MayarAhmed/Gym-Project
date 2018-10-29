@@ -1,0 +1,61 @@
+
+<!--
+
+<form #user="ngForm" (ngSubmit)="addUser(user)" class="my-5">
+  <div class="container">
+    <div class="form-group">
+      <input type="text" class="form-control" name="username"  placeholder="Enter your name" [(ngModel)]="username.username">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" name="email"  aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="username.email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="password"  placeholder="Password" [(ngModel)]="username.password">
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" name="phone"  placeholder="phone" [(ngModel)]="username.phone">
+    </div>
+    <div class="form-group">
+        <textarea type="text" name="address" rows="8" cols="80" placeholder="address" [(ngModel)]="username.address"></textarea>
+    </div>
+    <button class="btn px-5 line" >Submit</button>
+  </div>
+</form> -->
+
+
+<!-- <div *ngFor="let item of requestedData">
+  <span>{{ item.username }}</span>
+  <span>{{ item.email }}</span>
+</div> -->
+
+<div class=" Community raleway ">
+  <div class="regist">
+    <h4 class="font-weight-bold text-center ">Join Our Community</h4>
+    <form #user="ngForm" (ngSubmit)="addUser(user)" novalidate>
+      <div class="inputBox">
+          <input type="text" class="border-0 w-100 form-control" name="username" [(ngModel)]="username.username" required>
+        <label>User Name<span *ngIf="username.invalid && username.touched " class=" text-danger font-weight-bold"> *</span></label>
+      </div>
+      <div class="inputBox">
+          <input type="email" class="border-0 w-100 form-control" name="email" #email  aria-describedby="emailHelp"  [(ngModel)]="username.email" required>
+      <label>Email<span *ngIf="email.invalid && email.touched " class=" text-danger font-weight-bold" > *</span></label>
+      </div>
+      <div class="inputBox">
+        <input type="password" class="form-control border-0 w-100" type="password" #password name="password" [(ngModel)]="username.password" required>
+        <label>Password<span *ngIf="password.invalid && password.touched " class=" text-danger font-weight-bold" > *
+        </span></label>
+      </div>
+      <div class="inputBox">
+        <input type="text" class="border-0 w-100 form-control" name="number" #number [(ngModel)]="username.phone" required>
+        <label>Phone<span *ngIf="number.invalid && number.touched " class=" text-danger font-weight-bold" > *
+        </span></label>
+      </div>
+      <div class="inputBox">
+        <input type="text" class="border-0 w-100 form-control"  #address name="address" #number [(ngModel)]="username.address" required>
+        <label>Address<span *ngIf="address.invalid && address.touched " class=" text-danger font-weight-bold" > *
+        </span></label>
+      </div>
+      <button [disabled]="!user.valid" class="ml-auto">Sign Up</button>
+    </form>
+  </div>
+</div>

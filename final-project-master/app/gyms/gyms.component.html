@@ -1,0 +1,187 @@
+
+<!--
+<p>gym details</p>
+<a routerLink="gym-detail">gym-1</a> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 p-0 ">
+      <div class="jumbotron jumbotron-fluid fluidImg">
+<div class="container ">
+<h1 class="display-4 headGymSec text-white">Choose Your Area</h1>
+<select class="custom-select font-weight-bold chngWidth" [(ngModel)]="area" [(ngModel)]="term" (change)="selectChange($event)">
+<option selected></option>
+<option value="all">all</option>
+<option value="Sidi Bishr">Sidi Beshr</option>
+<option value="Asafra">Asafra</option>
+<option value="Mandara">Mandara</option>
+<option value="Louran">Louran</option>
+<option value="Kafr Abdo">Kafr Abdo</option>
+<option value="Gleem">Gleem</option>
+</select>
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-3">
+      <div id="accordion">
+      <div class="card" (click)="filters(spa.checked,sauna.checked,steam.checked,jacuzzi.checked,massage.checked,male.checked,female.checked,mix.checked)">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <h6 class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Gym Facilites
+        </h6>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body raleway">
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1a" #spa>
+          <label class="custom-control-label" for="customCheck1a">SPA</label>
+        </div>
+
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1b" #sauna>
+          <label class="custom-control-label" for="customCheck1b">Jaccuzi</label>
+        </div>
+
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1c" #steam>
+          <label class="custom-control-label" for="customCheck1c">Steam</label>
+        </div>
+
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1d" #jacuzzi>
+          <label class="custom-control-label" for="customCheck1d">Saunna</label>
+        </div>
+
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1e" #massage>
+          <label class="custom-control-label" for="customCheck1e">Massage</label>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <h6 class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Gender
+        </h6>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body raleway">
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1f" #male>
+          <label class="custom-control-label" for="customCheck1f">Male</label>
+        </div>
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1g" #female>
+          <label class="custom-control-label" for="customCheck1g">Female</label>
+        </div>
+        <div class="custom-control custom-checkbox my-2">
+          <input type="checkbox" class="custom-control-input" id="customCheck1h" #mix>
+          <label class="custom-control-label" for="customCheck1h">Mix</label>
+        </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+
+
+    <div class="col-md-8 raleway mb-5">
+        <div class="row mb-4" *ngFor="let x of gymItems | filter:term">
+          <a class="col-md-5 flipImg"  [routerLink] ="['/gyms/gym-detail',x.id , x.name]"
+           [queryParams] ="{allowEdit:'1'}" >
+            <img src={{x.headerImg}} class="w-100" height="300px">
+
+            <div class="sideBack">
+
+        </div>
+  </a>
+          <div class="col-md-7 pt-3 chngBoxGym pb-2 px-4">
+            <h2 class="chngFont line">{{x.name}}</h2>
+            <p>{{x.address}},{{x.district}}</p>
+            <label *ngIf='x.spa == true' class="pr-3">
+              <p>Spa </p>
+            </label>
+            <label *ngIf='x.sauna == true' class="pr-3">
+              <p> Sauna </p>
+            </label>
+            <label *ngIf='x.jacuzzi == true' class="pr-3">
+              <p> Jaccuzi </p>
+            </label>
+            <label *ngIf='x.steam == true' class="pr-3">
+              <p> Steam </p>
+            </label>
+            <label *ngIf='x.massage == true'>
+              <p> Massage</p>
+            </label>
+
+            <p class="text-secondary">{{x.discription}}</p>
+          </div>
+        </div>
+
+    </div>
+  </div><!--End Of Row-->
+      </div>
+<!-- </div> -->
+
+
+
+<!-- <div class="flex">
+
+   <div class="filters" (click)="filters(spa.checked,sauna.checked,steam.checked,jacuzzi.checked,massage.checked)">
+    <div>
+      <input type="checkbox" #spa> spa
+    </div>
+    <div>
+      <input type="checkbox" #sauna> sauna
+    </div>
+    <div>
+      <input type="checkbox" #steam> steam
+    </div>
+    <div>
+      <input type="checkbox" #jacuzzi> jacuzzi
+    </div>
+    <div>
+      <input type="checkbox" #massage> massage
+    </div>
+  </div>
+  </div> -->
+
+
+
+<!-- <a [routerLink] ="['/gyms/gym-detail',g.id , g.name]"
+ [queryParams] ="{allowEdit:'1'}"
+ *ngFor = "let g of gymss"> {{g.id}} </a>
+
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col my-3 card-container" *ngFor="let x of profileData" >
+          <div class="card flipImg" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/images/xJ-960x576.jpg" alt="Card image cap">
+            <div class="sideBack">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{x.name}}</h5>
+                <p class="card-text text-center">Some quick example text to build on the card title and make up the
+                  bulk of the card's content.</p>
+                  <div class="text-center">
+                <a href="#" class="btn btn-primary" (click)="getProfileData()">Read More</a></div>
+              </div>
+            </div>
+
+          </div>  -->
+        <!-- </div> -->
+        <!--END OF COL 3-->
+
+
+  <!-- </div> -->
+  <!--END OF ROW-->
+<!-- </div> -->
+<!--END OF CONTAINER -->

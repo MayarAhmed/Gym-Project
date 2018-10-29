@@ -1,0 +1,170 @@
+@import '../../scss/variables';
+@import '../../scss/mixin';
+.healthFitness {
+  background-image: url(../../assets/img/article/16.jpg);
+  background-size: cover;
+  height: 50vh;
+  background-attachment: fixed;
+}
+
+.dark-modal .modal-content {
+  background-color: #292b2c;
+  color: white;
+}
+
+.dark-modal .close {
+  color: white;
+}
+
+.light-blue-backdrop {
+  background-color: #5cb3fd;
+}
+
+.img1 {
+  position: relative;
+  .back1 {
+    @include articlImg ('../../assets/img/article/1.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+
+.img2 {
+  .back2 {
+    @include articlImg ('../../assets/img/article/6.jpg');
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img3 {
+  .back3 {
+    @include articlImg ('../../assets/img/article/17.jpg');
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img4 {
+  .back4 {
+    @include articlImg ('../../assets/img/article/8.jpg');
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img5 {
+  .back5 {
+    @include articlImg ('../../assets/img/article/4.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+
+.img6 {
+  .back6 {
+    @include articlImg ('../../assets/img/article/7.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img6 {
+  .back6 {
+    @include articlImg ('../../assets/img/article/7.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img7 {
+  .back7 {
+    @include articlImg ('../../assets/img/article/3.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img8 {
+  .back8 {
+    @include articlImg ('../../assets/img/article/11.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+
+.img9 {
+  .back9 {
+    @include articlImg ('../../assets/img/article/5.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+.img10 {
+  .back10 {
+    @include articlImg ('../../assets/img/article/13.jpg');
+    label {
+      background: #FF6600;
+      border-radius: $round_ratio;
+      position: absolute;
+      top: 1vh;
+    }
+    button {
+      @include articlButton();
+    }
+  }
+}
+@media (min-width: 321px) and (max-width: 900px) {
+.back1,.back2,.back4,.back7,.back8,.back9{
+margin-bottom: 5vh;
+}
+
+
+
+}

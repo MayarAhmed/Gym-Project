@@ -1,0 +1,31 @@
+<!--
+<form class="my-5" >
+  <div class="container">
+    <div class="form-group">
+      <input type="email" class="form-control"  #emailAddress aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="password"  placeholder="Password" >
+    </div>
+    <button class="btn px-5 line" (click)="check(emailAddress.value)"> Submit</button>
+  </div>
+</form> -->
+
+<div class=" welcome raleway">
+  <div class="login ">
+    <h4 class="font-weight-bold text-center">Log In</h4>
+    <form name="loginForm" #loginForm="ngForm" novalidate>
+      <div class="inputBox">
+        <input class="border-0 w-100" type="email"  name="emailAddress" #emailAddress="ngModel" ngModel  required>
+        <label>Email Address<span *ngIf="emailAddress.invalid && emailAddress.touched " class=" text-danger font-weight-bold" > *
+        </span></label>
+      </div>
+      <div class="inputBox">
+        <input class="border-0 w-100" type="password"  name="password"  required #password="ngModel" ngModel >
+        <label>Password<span *ngIf="password.invalid && password.touched " class=" text-danger font-weight-bold" > *
+        </span></label>
+      </div>
+      <button  [disabled]="!loginForm.valid" class="ml-auto" (click)="check(emailAddress.value)">Log In</button>
+    </form>
+  </div>
+</div>

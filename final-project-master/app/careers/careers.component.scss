@@ -1,0 +1,63 @@
+@import '../../scss/variables';
+.careers{
+  background: url('../../assets/images/offers/Strength_and_fitness_tm_44.jpg');
+  
+  h3{
+    color:$primary_color;
+  }
+
+img{
+  filter: grayscale(100%);
+  border-radius: $round-ratio;
+}
+span{
+  color: $primary_color;
+  padding-left: 5px ;
+  padding-right: 5px;
+}
+.job-title{
+  color:white;
+  background-color: black;
+  padding:8px;
+  border-radius: $round-ratio;
+}
+  .text{
+    width:100%;
+    opacity: 0;
+    border:none;
+    background-color: #efefef;
+    height:1px;
+    border-radius: $round-ratio;
+    transition:  height .9s, border .9s ,opacity 2s;
+  }
+  .col-md-4:hover .text{
+    opacity: 1;
+    height:180px;
+    border: 1px solid #a2a2a2 ;
+    box-shadow:2px 23px 29px -17px #676b63;
+
+  }
+  .col-md-4:hover img {
+    filter: grayscale(0);
+
+  }
+
+}
+
+
+@media screen and (max-width:760px) {
+  .careers{
+    .text{
+      opacity:1;
+      height:180px;
+      border: 1px solid #a2a2a2 ;
+      box-shadow:2px 23px 29px -17px #676b63;
+    }
+    img{
+      filter: grayscale(0);
+
+    }
+  }
+
+
+}
